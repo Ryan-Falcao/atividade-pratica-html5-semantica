@@ -1,209 +1,364 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Placas de Vídeo</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h1>Placas de Vídeo</h1>
-        <nav>
-            <a href="#avaliacao">Avalie uma placa</a>
-            <a href="#rtx50">Avaliações</a>
-        </nav>
+      <h1>Placas de Vídeo</h1>
+      <nav>
+        <a href="#avaliacao">Avalie uma placa</a>
+        <a href="#rtx50">Avaliações</a>
+      </nav>
     </header>
 
     <main>
+      <section id="placas">
+        <h2>Conheça as placas de vídeo</h2>
+        <p>
+          Encontre informações sobre placas de vídeo para jogos, trabalho e
+          outras atividades.
+        </p>
 
-        <section id="placas">
-            <h2>Conheça as placas de vídeo</h2>
-            <p>
-                Encontre informações sobre placas de vídeo para jogos,
-                trabalho e outras atividades.
-            </p>
-        </section>
+        <!--
+            Utilizo auto pois o vídeo será usado no autoplay
+            e precisa ser carregado o quanto antes
+            -->
 
-        <section id="avaliacao">
-            <h2>Avalie uma placa de vídeo</h2>
+        <video
+          preload="auto"
+          controls
+          width="400px"
+          height="200px"
+          poster="assets/RTX-img.jpeg"
+          autoplay
+          loop
+          muted
+        >
+          <source
+            src="assets/GeForce RTX 50 Series GPUs and Laptops  Game Changer - NVIDIA GeForce (1080p, h264, youtube) (1).mp4"
+          />
+          Seu navegador não suporta vídeo HTML5, volte para a guerra
+        </video>
+      </section>
 
-            <form>
+      <section id="avaliacao">
+        <h2>Avalie uma placa de vídeo</h2>
 
-                <fieldset>
-                    <legend>Informações da avaliação</legend>
+        <form>
+          <fieldset>
+            <legend>Informações da avaliação</legend>
 
-                    <div>
-                        <label for="nome">Placa:</label>
-                        <select name="placaEscolhida" id="placaEscolhida">
-                            <option value="RTX5090">RTX5090</option>
-                            <option value="RTX5080">RTX5080</option>
-                            <option value="RTX5070 TI">RTX5070 TI</option>
-                            <option value="RTX 5070">RTX 5070</option>
-                            <option value="RTX 5060 TI 16gb">RTX 5060 TI</option>
-                            <option value="RTX 5060">RTX 5060</option>
-                            <option value="RTX 5050">RTX 5050</option>
-                        </select>
-                        
-                    </div>
+            <div>
+              <label for="nome">Placa:</label>
+              <select name="placaEscolhida" id="placaEscolhida">
+                <option value="RTX5090">RTX5090</option>
+                <option value="RTX5080">RTX5080</option>
+                <option value="RTX5070 TI">RTX5070 TI</option>
+                <option value="RTX 5070">RTX 5070</option>
+                <option value="RTX 5060 TI 16gb">RTX 5060 TI</option>
+                <option value="RTX 5060">RTX 5060</option>
+                <option value="RTX 5050">RTX 5050</option>
+              </select>
+            </div>
 
-                    <br>
+            <br />
 
-                    <div>
-                        <label for="email">E-mail:</label>
-                        <input type="email"id="email" name="email"required>
-                    </div>
+            <div>
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
 
-                    <br>
+            <br />
 
-                   
+            <br />
 
-                    <br>
+            <div>
+              <label for="nota">Nota da placa (1 a 10):</label>
+              <input
+                type="number"
+                id="nota"
+                name="nota"
+                min="1"
+                max="10"
+                required
+              />
+            </div>
 
-                    <div>
-                        <label for="nota">Nota da placa (1 a 10):</label>
-                        <input type="number"id="nota"name="nota" min="1"max="10"required>
-                    </div>
+            <br />
 
-                    <br>
+            <div>
+              <label for="comentario">Comentário:</label>
+              <textarea id="comentario" name="comentario" rows="5"></textarea>
+            </div>
 
-                    <div>
-                        <label for="comentario">Comentário:</label>
-                        <textarea id="comentario"name="comentario"rows="5"></textarea>
-                    </div>
-                    <br>
-                    <div>
-                        <fieldset>
-                            <legend>Vram</legend>
+            <br />
 
-                            <label>
-                                <input type="radio" name="vram" id="vram">
-                                1gb
-                            </label>
-                             <label >
-                                <input type="radio" name="vram" id="vram">
-                                2gb
-                            </label>
-                            <label >
-                                <input type="radio" name="vram" id="vram">
-                                4gb
-                            </label>
-                            <label >
-                                <input type="radio" name="vram" id="vram">
-                                6gb
-                            </label>
-                            <label >
-                                <input type="radio" name="vram" id="vram">
-                                8gb
-                            </label>
-                            <label >
-                                <input type="radio" name="vram" id="vram">
-                                12gb
-                            </label>
-                            <label >
-                                <input type="radio" name="vram" id="vram">
-                                16gb
-                            </label>
-                            <label >
-                                <input type="radio" name="vram" id="vram">
-                                24gb
-                            </label>
-                            <label >
-                                <input type="radio" name="vram" id="vram">
-                                32gb
-                            </label>
-                        </fieldset>
-                    </div>
-                    <br>
-                    <div>
-                        <label for="Preco">Preço pago:R$</label>
-                        <input type="number"  id="preco">
-                    </div>
-                </fieldset>
+            <div>
+              <fieldset>
+                <legend>Vram</legend>
 
-                <br>
+                <label>
+                  <input type="radio" name="vram" id="vram" />
+                  1gb
+                </label>
+                <label>
+                  <input type="radio" name="vram" id="vram" />
+                  2gb
+                </label>
+                <label>
+                  <input type="radio" name="vram" id="vram" />
+                  4gb
+                </label>
+                <label>
+                  <input type="radio" name="vram" id="vram" />
+                  6gb
+                </label>
+                <label>
+                  <input type="radio" name="vram" id="vram" />
+                  8gb
+                </label>
+                <label>
+                  <input type="radio" name="vram" id="vram" />
+                  12gb
+                </label>
+                <label>
+                  <input type="radio" name="vram" id="vram" />
+                  16gb
+                </label>
+                <label>
+                  <input type="radio" name="vram" id="vram" />
+                  24gb
+                </label>
+                <label>
+                  <input type="radio" name="vram" id="vram" />
+                  32gb
+                </label>
+              </fieldset>
+            </div>
 
-                <button type="submit">Enviar avaliação</button>
+            <br />
 
-            </form>
-        </section>
-        
-       <section id="rtx50">
-    <h2>GeForce RTX Série 50</h2>
+            <div>
+              <label for="Preco">Preço pago:R$</label>
+              <input type="number" id="preco" />
+            </div>
+          </fieldset>
 
-    <article>
-        <h3>RTX 5090</h3>
-        <p><strong>Arquitetura:</strong> Blackwell</p>
-        <p><strong>Memória:</strong> 32 GB GDDR7</p>
-        <p><strong>CUDA Cores:</strong> 21.760</p>
-        <p><strong>Clock Boost:</strong> 2,41 GHz</p>
-        <p><strong>Pontuação:</strong> 10/10</p>
-    </article>
-    <article>
-        <h3>RTX 5080</h3>
-        <p><strong>Arquitetura:</strong> Blackwell</p>
-        <p><strong>Memória:</strong> 16 GB GDDR7</p>
-        <p><strong>CUDA Cores:</strong> 10.752</p>
-        <p><strong>Clock Boost:</strong> 2,62 GHz</p>
-        <p><strong>Pontuação:</strong> 9,5/10</p>
-    </article>
-    <article>
-        <h3>RTX 5070 TI</h3>
-        <p><strong>Arquitetura:</strong> Blackwell</p>
-        <p><strong>Memória:</strong> 16 GB GDDR7</p>
-        <p><strong>CUDA Cores:</strong> 8.960</p>
-        <p><strong>Clock Boost:</strong> 2,45 GHz</p>
-        <p><strong>Pontuação:</strong> 9,2/10</p>
-    </article>
-    <article>
-        <h3>RTX 5070</h3>
-        <p><strong>Arquitetura:</strong> Blackwell</p>
-        <p><strong>Memória:</strong> 12 GB GDDR7</p>
-        <p><strong>CUDA Cores:</strong> 6.144</p>
-        <p><strong>Clock Boost:</strong> 2,51 GHz</p>
-        <p><strong>Pontuação:</strong> 8,8/10</p>
-    </article>
-    <article>
-        <h3>RTX 5060 Ti 16 GB</h3>
-        <p><strong>Arquitetura:</strong> Blackwell</p>
-        <p><strong>Memória:</strong> 16 GB GDDR7</p>
-        <p><strong>CUDA Cores:</strong> 4.608</p>
-        <p><strong>Clock Boost:</strong> 2,57 GHz</p>
-        <p><strong>Pontuação:</strong> 8,5/10</p>
-    </article>
-    <article>
-        <h3>RTX 5060 Ti 8 GB</h3>
-        <p><strong>Arquitetura:</strong> Blackwell</p>
-        <p><strong>Memória:</strong> 8 GB GDDR7</p>
-        <p><strong>CUDA Cores:</strong> 4.608</p>
-        <p><strong>Clock Boost:</strong> 2,57 GHz</p>
-        <p><strong>Pontuação:</strong>8,2/10</p>
-    </article>
-    <article>
-        <h3>RTX 5060</h3>
-        <p><strong>Arquitetura:</strong> Blackwell</p>
-        <p><strong>Memória:</strong> 8 GB GDDR7</p>
-        <p><strong>CUDA Cores:</strong> 3.840</p>
-        <p><strong>Clock Boost:</strong> 2,50 GHz</p>
-        <p><strong>Pontuação:</strong>7,9/10</p>
-    </article>
-    <article>
-        <h3>RTX 5050</h3>
-        <p><strong>Arquitetura:</strong> Blackwell</p>
-        <p><strong>Memória:</strong> 8 GB GDDR7</p>
-        <p><strong>CUDA Cores:</strong> 2.560</p>
-        <p><strong>Clock Boost:</strong> 2,57 GHz</p>
-        <p><strong>Pontuação:</strong>7,5/10</p>
-    </article>
+          <br />
 
-        </section>
+          <button type="submit">Enviar avaliação</button>
+        </form>
+      </section>
 
+      <section id="rtx50">
+        <h2>GeForce RTX Série 50</h2>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Arquitetura</th>
+              <th>Memória</th>
+              <th>CUDA Cores</th>
+              <th>Clock Boost</th>
+              <th>Pontuação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RTX 5090</td>
+              <td>Blackwell</td>
+              <td>32 GB GDDR7</td>
+              <td>21.760</td>
+              <td>2,41 GHz</td>
+              <td>10/10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Arquitetura</th>
+              <th>Memória</th>
+              <th>CUDA Cores</th>
+              <th>Clock Boost</th>
+              <th>Pontuação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RTX 5080</td>
+              <td>Blackwell</td>
+              <td>16 GB GDDR7</td>
+              <td>10.752</td>
+              <td>2,62 GHz</td>
+              <td>9,5/10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Arquitetura</th>
+              <th>Memória</th>
+              <th>CUDA Cores</th>
+              <th>Clock Boost</th>
+              <th>Pontuação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RTX 5070 TI</td>
+              <td>Blackwell</td>
+              <td>16 GB GDDR7</td>
+              <td>8.960</td>
+              <td>2,45 GHz</td>
+              <td>9,2/10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Arquitetura</th>
+              <th>Memória</th>
+              <th>CUDA Cores</th>
+              <th>Clock Boost</th>
+              <th>Pontuação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RTX 5070</td>
+              <td>Blackwell</td>
+              <td>12 GB GDDR7</td>
+              <td>6.144</td>
+              <td>2,51 GHz</td>
+              <td>8,8/10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Arquitetura</th>
+              <th>Memória</th>
+              <th>CUDA Cores</th>
+              <th>Clock Boost</th>
+              <th>Pontuação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RTX 5060 Ti 16 GB</td>
+              <td>Blackwell</td>
+              <td>16 GB GDDR7</td>
+              <td>4.608</td>
+              <td>2,57 GHz</td>
+              <td>8,5/10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Arquitetura</th>
+              <th>Memória</th>
+              <th>CUDA Cores</th>
+              <th>Clock Boost</th>
+              <th>Pontuação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RTX 5060 Ti 8 GB</td>
+              <td>Blackwell</td>
+              <td>8 GB GDDR7</td>
+              <td>4.608</td>
+              <td>2,57 GHz</td>
+              <td>8,2/10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Arquitetura</th>
+              <th>Memória</th>
+              <th>CUDA Cores</th>
+              <th>Clock Boost</th>
+              <th>Pontuação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RTX 5060</td>
+              <td>Blackwell</td>
+              <td>8 GB GDDR7</td>
+              <td>3.840</td>
+              <td>2,50 GHz</td>
+              <td>7,9/10</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Arquitetura</th>
+              <th>Memória</th>
+              <th>CUDA Cores</th>
+              <th>Clock Boost</th>
+              <th>Pontuação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>RTX 5050</td>
+              <td>Blackwell</td>
+              <td>8 GB GDDR7</td>
+              <td>2.560</td>
+              <td>2,57 GHz</td>
+              <td>7,5/10</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Placas de Vídeo</p>
+      <p>&copy; 2026 Placas de Vídeo</p>
     </footer>
-
-</body>
+  </body>
 </html>
